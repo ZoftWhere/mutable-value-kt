@@ -1,0 +1,12 @@
+# Maven
+/_target/
+
+# Log Files
+/*.log
+
+# IntelliJ
+/.idea/
+
+# MacOS
+/.DS_Store
+/**/.DS_Store
