@@ -3,7 +3,7 @@ package app.zoftwhere.mutable
 import app.zoftwhere.function.PlaceHolder
 import java.util.Optional
 
-class MutableValue<E> : PlaceHolder<E> {
+open class MutableValue<E> : PlaceHolder<E> {
 
     private var value: E? = null
 
