@@ -7,16 +7,19 @@ open class MutableValue<E> : PlaceHolder<E> {
 
     private var value: E? = null
 
-    override val isPresent: Boolean
-        get() = value != null
-
     constructor()
 
     constructor(value: E?) {
         this.value = value
     }
 
-    fun optional(): Optional<E> {
+    override val isPresent: Boolean
+        get() = value != null
+
+    override val isEmpty: Boolean
+        get() = value == null
+
+    open fun optional(): Optional<E> {
         return Optional.ofNullable(value)
     }
 
