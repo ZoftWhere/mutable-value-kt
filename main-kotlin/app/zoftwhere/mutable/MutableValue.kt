@@ -1,14 +1,11 @@
-package net.sf.zoftwhere.mutable
+package app.zoftwhere.mutable
 
-import net.sf.zoftwhere.function.PlaceHolder
+import app.zoftwhere.function.PlaceHolder
 import java.util.Optional
 
-class MutableValue<E> : PlaceHolder<E> {
+open class MutableValue<E> : PlaceHolder<E> {
 
     private var value: E? = null
-
-    override val isPresent: Boolean
-        get() = value != null
 
     constructor()
 
@@ -16,7 +13,13 @@ class MutableValue<E> : PlaceHolder<E> {
         this.value = value
     }
 
-    fun optional(): Optional<E> {
+    override val isPresent: Boolean
+        get() = value != null
+
+    override val isEmpty: Boolean
+        get() = value == null
+
+    open fun optional(): Optional<E> {
         return Optional.ofNullable(value)
     }
 
