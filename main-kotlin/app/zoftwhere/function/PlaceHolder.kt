@@ -1,4 +1,4 @@
-package net.sf.zoftwhere.function
+package app.zoftwhere.function
 
 import java.util.function.Consumer
 import java.util.function.Supplier

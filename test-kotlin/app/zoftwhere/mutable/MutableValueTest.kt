@@ -1,4 +1,4 @@
-package net.sf.zoftwhere.mutable
+package app.zoftwhere.mutable
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
