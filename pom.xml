@@ -3,11 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>app.zoftwhere</groupId>
+    <groupId>app.zoftwhere.mutable</groupId>
     <artifactId>mutable-value-kt</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-
+    <organization>
+        <name>ZoftWhere</name>
+        <url>https://github.com/ZoftWhere</url>
+    </organization>
+    <name>zoftwhere.mutable.value.kt</name>
     <description>Mutable value for Kotlin.</description>
+    <url>https://github.com/ZoftWhere/mutable-value-kt</url>
 
     <properties>
         <!-- Settings: maven-resource-plugin -->
