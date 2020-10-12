@@ -219,23 +219,13 @@
                             <!-- main compile against test JDK API with module-info -->
                             <release>${maven.compiler.test-jdk}</release>
                             <compileSourceRoots>
-                                <sourceRoot>${project.basedir}/main-java</sourceRoot>
+                                <!-- All source should compile with Kotlin compiler. -->
+                                <!-- Only compile module-info with Maven Compiler. -->
                                 <sourceRoot>${project.basedir}/main-jpms</sourceRoot>
                             </compileSourceRoots>
                             <compilerArgs>
                                 <arg>-Xlint:-requires-transitive-automatic</arg>
                             </compilerArgs>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>main-compile-jdk8</id>
-                        <phase>none</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                        <configuration>
-                            <source>${maven.compiler.main-jdk}</source>
-                            <target>${maven.compiler.main-jdk}</target>
                         </configuration>
                     </execution>
                     <execution>
