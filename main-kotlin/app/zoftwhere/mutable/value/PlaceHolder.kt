@@ -5,7 +5,11 @@ import java.util.function.Supplier
 
 interface PlaceHolder<I> : Consumer<I>, Supplier<I> {
 
-    override fun accept(newValue: I)
+    fun set(value: I) {
+        accept(value)
+    }
+
+    fun clear()
 
     val isPresent: Boolean
 

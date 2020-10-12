@@ -18,6 +18,10 @@ open class MutableValue<E> : PlaceHolder<E> {
     override val isEmpty: Boolean
         get() = value == null
 
+    override fun clear() {
+        value = null
+    }
+
     open fun optional(): Optional<E> {
         return Optional.ofNullable(value)
     }
@@ -26,8 +30,8 @@ open class MutableValue<E> : PlaceHolder<E> {
         return Optional.ofNullable(value).get()
     }
 
-    override fun accept(newValue: E) {
-        this.value = newValue
+    override fun accept(value: E) {
+        this.value = value
     }
 
     override fun hashCode(): Int {
@@ -41,7 +45,7 @@ open class MutableValue<E> : PlaceHolder<E> {
         return when (other) {
             null -> false
             !is MutableValue<*> -> false
-            else -> value == other.value
+            else -> this.value == other.value
         }
     }
 }

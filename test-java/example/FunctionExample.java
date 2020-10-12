@@ -27,8 +27,8 @@ class FunctionExample {
         }
 
         @Override
-        public void accept(String newValue) {
-            value = newValue;
+        public void accept(String value) {
+            this.value = value;
         }
 
         @Override
@@ -39,6 +39,16 @@ class FunctionExample {
         @Override
         public boolean isEmpty() {
             return value == null;
+        }
+
+        @Override
+        public void clear() {
+            this.value = null;
+        }
+
+        @Override
+        public void set(String value) {
+            this.value = value;
         }
 
         @Override
