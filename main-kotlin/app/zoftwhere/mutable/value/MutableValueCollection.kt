@@ -1,4 +1,4 @@
-package app.zoftwhere.mutable
+package app.zoftwhere.mutable.value
 
 import java.util.Optional
 import java.util.stream.Stream

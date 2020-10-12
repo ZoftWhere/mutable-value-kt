@@ -1,6 +1,5 @@
-package app.zoftwhere.mutable
+package app.zoftwhere.mutable.value
 
-import app.zoftwhere.function.PlaceHolder
 import java.util.Optional
 
 open class MutableValue<E> : PlaceHolder<E> {
