@@ -460,7 +460,7 @@
                 <version>${moditect-maven-plugin.version}</version>
                 <executions>
                     <execution>
-                        <id>add-module-infos</id>
+                        <id>main-jpms</id>
                         <phase>none</phase>
                         <goals>
                             <goal>add-module-info</goal>
