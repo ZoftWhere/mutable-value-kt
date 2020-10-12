@@ -1,6 +1,5 @@
-package app.zoftwhere.mutable
+package app.zoftwhere.mutable.value
 
-import app.zoftwhere.mutable.value.MutableValue
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertNotNull
