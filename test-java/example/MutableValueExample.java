@@ -19,5 +19,4 @@ class MutableValueExample {
         final var copy = new MutableValue<>("newValue");
         assertEquals(mutable, copy);
     }
-
 }

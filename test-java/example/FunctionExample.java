@@ -46,5 +46,4 @@ class FunctionExample {
             return Objects.toString(value);
         }
     }
-
 }
