@@ -37,7 +37,7 @@ open class MutableValueCollection<E> : MutableValue<Collection<E>> {
         return collection.stream()
     }
 
-    override fun accept(value: Collection<E>) {
-        this.value = value
+    override fun accept(newValue: Collection<E>) {
+        this.value = newValue
     }
 }

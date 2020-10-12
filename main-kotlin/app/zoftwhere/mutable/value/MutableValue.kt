@@ -26,7 +26,22 @@ open class MutableValue<E> : PlaceHolder<E> {
         return Optional.ofNullable(value).get()
     }
 
-    override fun accept(value: E) {
-        this.value = value
+    override fun accept(newValue: E) {
+        this.value = newValue
+    }
+
+    override fun hashCode(): Int {
+        return when (value) {
+            null -> 0
+            else -> value.hashCode()
+        }
+    }
+
+    override fun equals(other: Any?): Boolean {
+        return when (other) {
+            null -> false
+            !is MutableValue<*> -> false
+            else -> value == other.value
+        }
     }
 }
