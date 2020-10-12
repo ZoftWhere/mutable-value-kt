@@ -172,12 +172,8 @@
                         <configuration>
                             <sourceDirs>
                                 <sourceDir>${project.build.sourceDirectory}</sourceDir>
-                                <sourceDir>${project.basedir}/main-jpms</sourceDir>
                                 <sourceDir>${project.basedir}/main-kotlin</sourceDir>
                             </sourceDirs>
-                            <module>zoftwhere.mutable.value</module>
-                            <moduleName>zoftwhere.mutable.value</moduleName>
-                            <testModule>zoftwhere.mutable.value.test</testModule>
                         </configuration>
                     </execution>
                     <execution>
