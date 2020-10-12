@@ -299,11 +299,6 @@
                         </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <argLine>
-                        --add-opens&#32;zoftwhere.mutable.value/app.zoftwhere.mutable.value=ALL-UNNAMED
-                    </argLine>
-                </configuration>
                 <dependencies>
                     <dependency>
                         <groupId>org.junit.jupiter</groupId>
