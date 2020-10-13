@@ -1,4 +1,4 @@
-package app.zoftwhere.mutable
+package app.zoftwhere.mutable.value
 
 import java.util.Optional
 import java.util.stream.Stream
@@ -16,12 +16,6 @@ open class MutableValueCollection<E> : MutableValue<Collection<E>> {
     override fun optional(): Optional<Collection<E>> {
         return Optional.ofNullable(value)
     }
-
-    override val isPresent: Boolean
-        get() = value != null
-
-    override val isEmpty: Boolean
-        get() = value == null
 
     override fun get(): Collection<E> {
         return Optional.ofNullable(value).get()

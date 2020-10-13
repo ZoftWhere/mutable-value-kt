@@ -1,6 +1,5 @@
-module zoftwhere.mutable.value {
+module zoftwhere.mutable.value.kt {
     requires kotlin.stdlib;
 
-    exports net.sf.zoftwhere.function;
-    exports net.sf.zoftwhere.mutable;
+    exports app.zoftwhere.mutable.value;
 }

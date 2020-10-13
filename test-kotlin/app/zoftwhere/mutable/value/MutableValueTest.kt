@@ -1,7 +1,8 @@
-package app.zoftwhere.mutable
+package app.zoftwhere.mutable.value
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
+import org.junit.jupiter.api.Assertions.assertNotEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Assertions.fail
@@ -51,5 +52,30 @@ internal class MutableValueTest {
         assertNotNull(actual)
         assertNotNull(actual.get())
         assertEquals(value, actual.get())
+    }
+
+    @Test
+    fun testClear() {
+        val actual = MutableValue("string")
+        actual.clear()
+        val empty = MutableValue<Int>()
+        assertEquals(actual, empty)
+    }
+
+    @Test
+    fun testHashCode() {
+        val actual = MutableValue<Any>()
+        assertEquals(0, actual.hashCode())
+
+        actual.set("non-zero")
+        assertNotEquals(0, actual.hashCode())
+    }
+
+    @Test
+    fun testNullEquals() {
+        val actual = MutableValue("string")
+        val empty = MutableValue<Int>()
+        assertNotEquals(actual, empty)
+        assertNotEquals(actual, null)
     }
 }
